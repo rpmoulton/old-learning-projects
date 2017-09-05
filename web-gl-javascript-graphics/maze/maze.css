@@ -1,0 +1,43 @@
+*{
+  	margin: 0;
+  	padding: 0;
+  	outline: none;
+  	-webkit-user-select: none;
+		-moz-user-select: none;
+		-o-user-select: none;
+		-ms-user-select: none;
+		 user-select: none;
+  }
+
+  .canvas3d{
+  	position: fixed;
+  	top: 0;
+  	right: 0;
+  }
+  
+  .preview{
+
+  	 width: 200px;
+  	 color: #111;
+  	 background: #13579B;
+  	 position: fixed;
+  	 top: 0px;
+  	 right: 50%;
+  	 z-index: 9;
+  	 padding: 2px;
+  	 /*opacity: .8;*/
+  	 border-radius: 6px;
+  	 border: 1px solid #FFF;
+  }
+
+  .info{
+  	font-size: 14px;
+  	float: left;
+  	width: 210px;
+  	padding: 10px 0 0 10px;
+  }
+
+  #canvas2d{
+  	width: 200px;
+  	float: left;
+  }

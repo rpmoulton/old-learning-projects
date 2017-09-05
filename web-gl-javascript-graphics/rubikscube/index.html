@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Rubik's cube</title>
+    
+    <meta charset="UTF-8" />
+    
+    <link rel="stylesheet" href="rubiks.css"></link>  
+    <script src="http://yui.yahooapis.com/3.4.1/build/yui/yui-min.js"></script>
+    <script src="rubiks.js"></script>
+    <script>
+        YUI().use('node','rubiks',function(Y){
+            var cube = window.cube = new Y.Rubiks();
+        });
+    </script>
+</head>
+<body>
+
+    <section id="messages">
+	   <div class="wrapper">
+    	    <ul class="active">
+    	        <div class="prev"></div>
+    	        <div class="current"></div>
+    	        <div class="next"></div>
+    	    </ul>
+
+    	    <div class="populate">
+    	    </div>
+	   </div>
+    </section>
+
+    <div id="cube-container">
+        <div id="cube-viewport">
+            <div id="cube">
+            <!-- UP FACE -->            
+                <!-- LEFT COLUMN (L)  -->                
+                <div class="utl cube up LM UE BS"><div><span>U1</span></div></div> 
+                <div class="ucl cube up LM UE CS"><div><span>U2</span></div></div>
+                <div class="ubl cube up LM UE FS"><div><span>U3</span></div></div>
+                <!-- CENTER COLUMN (C)  -->            
+                <div class="utc cube up CM UE BS"><div><span>U4</span></div></div>
+                <div class="ucc cube up CM UE CS"><div><span>U5</span></div></div>
+                <div class="ubc cube up CM UE FS"><div><span>U6</span></div></div>
+                <!-- RIGHT COLUMN (R)  -->
+                <div class="utr cube up RM UE BS"><div><span>U7</span></div></div>
+                <div class="ucr cube up RM UE CS"><div><span>U8</span></div></div>
+                <div class="ubr cube up RM UE FS"><div><span>U9</span></div></div>
+            <!-- END UP FACE -->  
+
+            <!-- FRONT FACE -->
+                <!-- LEFT COLUMN (L)  -->                
+                <div class="ftl cube front LM UE FS"><div><span>F1</span></div></div>
+                <div class="fcl cube front LM CE FS"><div><span>F2</span></div></div>
+                <div class="fbl cube front LM DE FS"><div><span>F3</span></div></div>
+                <!-- CENTER COLUMN (C)  -->            
+                <div class="ftc cube front CM UE FS"><div><span>F4</span></div></div>
+                <div class="fcc cube front CM CE FS"><div><span>F5</span></div></div>
+                <div class="fbc cube front CM DE FS"><div><span>F6</span></div></div>
+                <!-- RIGHT COLUMN (R)  -->
+                <div class="ftr cube front RM UE FS"><div><span>F7</span></div></div>
+                <div class="fcr cube front RM CE FS"><div><span>F8</span></div></div>
+                <div class="fbr cube front RM DE FS"><div><span>F9</span></div></div>
+            <!-- END FRONT FACE -->
+            
+            <!--DOWN FACE -->
+                <!-- LEFT COLUMN (L)  -->                
+                <div class="dtl cube down LM DE FS"><div><span>D1</span></div></div>
+                <div class="dcl cube down LM DE CS"><div><span>D2</span></div></div>
+                <div class="dbl cube down LM DE BS"><div><span>D3</span></div></div>
+                <!-- CENTER COLUMN (C)  -->                
+                <div class="dtc cube down CM DE FS"><div><span>D4</span></div></div>
+                <div class="dcc cube down CM DE CS"><div><span>D5</span></div></div>
+                <div class="dbc cube down CM DE BS"><div><span>D6</span></div></div>
+                <!-- RIGHT COLUMN (R)  -->        
+                <div class="dtr cube down RM DE FS"><div><span>D7</span></div></div>
+                <div class="dcr cube down RM DE CS"><div><span>D8</span></div></div>
+                <div class="dbr cube down RM DE BS"><div><span>D9</span></div></div>
+            <!-- END DOWN FACE -->
+            
+            <!--BACK FACE -->    
+                <!-- LEFT COLUMN (L)  -->           
+                <div class="btl cube back LM DE BS"><div><span>B1</span></div></div>
+                <div class="bcl cube back LM CE BS"><div><span>B2</span></div></div>
+                <div class="bbl cube back LM UE BS"><div><span>B3</span></div></div>
+                <!-- CENTER COLUMN (C)  -->           
+                <div class="btc cube back CM DE BS"><div><span>B4</span></div></div>
+                <div class="bcc cube back CM CE BS"><div><span>B5</span></div></div>
+                <div class="bbc cube back CM UE BS"><div><span>B6</span></div></div> 
+                <!-- RIGHT COLUMN (R)  -->    
+                <div class="btr cube back RM DE BS"><div><span>B7</span></div></div>
+                <div class="bcr cube back RM CE BS"><div><span>B8</span></div></div>
+                <div class="bbr cube back RM UE BS"><div><span>B9</span></div></div> 
+            <!--END BOTTOM FACE --> 
+            
+            <!--LEFT FACE -->
+                <!-- LEFT COLUMN (L)  -->           
+                <div class="ltl cube left LM UE BS"><div><span>L1</span></div></div>
+                <div class="lcl cube left LM CE BS"><div><span>L2</span></div></div>
+                <div class="lbl cube left LM DE BS"><div><span>L3</span></div></div>
+                <!-- CENTER COLUMN (C)  -->  
+                <div class="ltc cube left LM UE CS"><div><span>L4</span></div></div>
+                <div class="lcc cube left LM CE CS"><div><span>L5</span></div></div>
+                <div class="lbc cube left LM DE CS"><div><span>L6</span></div></div>
+                <!-- RIGHT COLUMN (R)  -->    
+                <div class="ltr cube left LM UE FS"><div><span>L7</span></div></div>
+                <div class="lcr cube left LM CE FS"><div><span>L8</span></div></div>
+                <div class="lbr cube left LM DE FS"><div><span>L9</span></div></div>
+            <!--END LEFT FACE -->   
+            
+            <!--RIGHT FACE -->
+                <!-- LEFT COLUMN (L)  -->           
+                <div class="rtl cube right RM UE FS"><div><span>R1</span></div></div>
+                <div class="rcl cube right RM CE FS"><div><span>R2</span></div></div>
+                <div class="rbl cube right RM DE FS"><div><span>R3</span></div></div>
+                <!-- CENTER COLUMN (C)  -->  
+                <div class="rtc cube right RM UE CS"><div><span>R4</span></div></div>
+                <div class="rcc cube right RM CE CS"><div><span>R5</span></div></div>
+                <div class="rbc cube right RM DE CS"><div><span>R6</span></div></div>
+                <!-- RIGHT COLUMN (R)  -->    
+                <div class="rtr cube right RM UE BS"><div><span>R7</span></div></div>
+                <div class="rcr cube right RM CE BS"><div><span>R8</span></div></div>
+                <div class="rbr cube right RM DE BS"><div><span>R9</span></div></div>
+            <!--END LEFT FACE -->  
+                  
+             </div>
+        </div>
+    </div>  
+
+<section id="main">
+    <div>
+      
+        <div id="rotation">
+            <div class="rotate"></div>
+        </div>
+    </div>   
+</section>
+
+
+</body>
+
+</html>

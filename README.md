@@ -1,0 +1,1 @@
+I decided to get started with github and am posting some old code I did a long time ago just to get started. I will revisit everything I post and ensure its working and good, but I wanted to start getting some things out on my github and get started with it.
